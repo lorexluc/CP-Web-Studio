@@ -1,0 +1,812 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00eaff;
+}
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 8% 60px;
+    background: #050505;
+    overflow: hidden;
+}
+
+.texto {
+    max-width: 550px;
+    z-index: 2;
+}
+
+.texto span {
+    color: #aaa;
+    letter-spacing: 6px;
+    font-size: 14px;
+}
+
+.texto h2 {
+    font-size: 60px;
+    color: white;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.texto p {
+    color: #bbb;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.texto button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.texto button:hover {
+    transform: scale(1.08);
+    background: #00eaff;
+}
+
+.hero-carro {
+    width: 50%;
+    z-index: 1;
+}
+
+.hero-carro img {
+    width: 100%;
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(255, 255, 255, 0.15));
+}
+ /* =========================
+    MODELOS
+ ========================= */
+
+#modelos {
+    background: #070707;
+}
+
+section {
+    padding: 100px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.carros {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 350px;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: white;
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: 0.6s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.card h3 {
+    color: white;
+    font-size: 28px;
+    margin: 25px 20px 10px;
+    letter-spacing: 1px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.card button {
+    margin: 25px 20px 30px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card button:hover {
+    background: white;
+    color: black;
+}
+/* =========================
+   TECNOLOGIA NX
+========================= */
+
+.tecnologia {
+    padding: 100px 8%;
+    background: #080808;
+    text-align: center;
+}
+
+.tecnologia h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    color: #aaa;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.tecnologias-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tech-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 35px 25px;
+    transition: 0.4s;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    border-color: #00eaff;
+    box-shadow: 0 15px 40px rgba(0, 234, 255, 0.08);
+}
+
+.tech-card h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tech-card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+/* =========================
+   SOBRE NX MOTORS
+========================= */
+
+.sobre {
+    padding: 100px 8%;
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.sobre-texto {
+    max-width: 600px;
+}
+
+.sobre-texto span {
+    color: #aaa;
+    letter-spacing: 5px;
+    font-size: 14px;
+}
+
+.sobre-texto h2 {
+    color: white;
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.sobre-texto p {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.sobre-texto button {
+    margin-top: 20px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.sobre-texto button:hover {
+    transform: scale(1.06);
+    background: #00eaff;
+}
+
+.sobre-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-width: 260px;
+}
+
+.sobre-box div {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sobre-box div:hover {
+    border-color: #00eaff;
+    transform: translateY(-5px);
+}
+
+.sobre-box h3 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.sobre-box p {
+    color: #aaa;
+}
+/* =========================
+   GALERIA NX
+========================= */
+
+.galeria {
+    padding: 100px 8%;
+    background: #080808;
+    text-align: center;
+}
+
+.galeria h2 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.galeria > p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+}
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 120px 8%;
+    background: #000;
+    text-align: center;
+}
+
+.contato h2 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.contato button {
+    margin-top: 30px;
+    padding: 18px 45px;
+    border-radius: 50px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contato button:hover {
+    transform: scale(1.08);
+    background: #00eaff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px;
+    background: #050505;
+    text-align: center;
+    border-top: 1px solid #151515;
+}
+
+footer h3 {
+    color: white;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #777;
+}
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes entradaCarroHero {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entradaTexto {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.texto h2 {
+    animation: entradaTexto 1.2s ease;
+}
+
+.texto p {
+    animation: entradaTexto 1.5s ease;
+}
+
+.hero-carro img {
+    animation: entradaCarroHero 2s ease;
+}
+
+/* Animação para elementos que entram durante a rolagem */
+
+.animar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.animar.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =========================
+   MENU MOBILE
+========================= */
+
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #050505;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #222;
+    }
+
+    nav a {
+        margin: 15px;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 6% 60px;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .texto h2 {
+        font-size: 42px;
+    }
+
+    .texto p {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    .hero-carro {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    /* TECNOLOGIA */
+
+    .tecnologias-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    .sobre-texto h2 {
+        text-align: center;
+        font-size: 38px;
+    }
+
+    .sobre-box {
+        width: 100%;
+        max-width: 500px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* GALERIA */
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid img {
+        height: 280px;
+    }
+
+    /* CONTATO */
+
+    .contato h2 {
+        font-size: 40px;
+    }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .texto h2 {
+        font-size: 34px;
+    }
+
+    .texto span {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .texto p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    /* MODELOS */
+
+    .carros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+    /* TECNOLOGIA */
+
+    .tecnologias-box {
+        grid-template-columns: 1fr;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 75px 6%;
+    }
+
+    .sobre-texto h2 {
+        font-size: 34px;
+    }
+
+    .sobre-texto p {
+        font-size: 16px;
+    }
+
+    .sobre-box {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        padding: 75px 6%;
+    }
+
+    .galeria h2 {
+        font-size: 35px;
+    }
+
+    .galeria-grid img {
+        height: 230px;
+    }
+
+    /* CONTATO */
+
+    .contato {
+        padding: 90px 6%;
+    }
+
+    .contato h2 {
+        font-size: 32px;
+    }
+
+    .contato p {
+        font-size: 17px;
+    }
+
+    /* INTRO */
+
+    .intro h1 {
+        font-size: 70px;
+        letter-spacing: 15px;
+    }
+
+    .intro p {
+        font-size: 10px;
+        letter-spacing: 5px;
+    }
+}
+
+/* =========================
+   INTRO NX
+========================= */
+
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    animation: introSaida 3.5s ease forwards;
+}
+
+.intro h1 {
+    font-size: 120px;
+    letter-spacing: 25px;
+    margin: 0;
+
+    animation: logoEntrada 1.5s ease forwards;
+}
+
+.intro p {
+    color: #aaa;
+    font-size: 16px;
+    letter-spacing: 8px;
+    margin-top: 10px;
+
+    animation: fraseEntrada 1.5s ease forwards;
+}
+
+/* LOGO */
+
+@keyframes logoEntrada {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* FRASE */
+
+@keyframes fraseEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* SAÍDA DA INTRO */
+
+@keyframes introSaida {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    70% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+}   
