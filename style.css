@@ -1,812 +1,696 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    background: #050505;
-    color: white;
-    overflow-x: hidden;
+font-family: Arial, Helvetica, sans-serif;
+background: #050505;
+color: #ffffff;
+line-height: 1.6;
+overflow-x: hidden;
 }
-
-/* HEADER */
 
 header {
-    width: 100%;
-    padding: 25px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(10px);
+width: 100%;
+padding: 22px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+background: rgba(5, 5, 5, 0.75);
+backdrop-filter: blur(15px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+transition: 0.3s;
 }
 
-header h1 {
-    font-size: 32px;
-    letter-spacing: 4px;
+.header-scroll {
+background: rgba(3, 3, 3, 0.97);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+font-size: 24px;
+font-weight: 800;
+letter-spacing: -1px;
+white-space: nowrap;
+}
+
+.logo span {
+color: #00aaff;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 25px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    transition: 0.3s;
+color: #ffffff;
+text-decoration: none;
+font-size: 14px;
+transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #00eaff;
+color: #00aaff;
 }
-/* =========================
-   HERO
-========================= */
+
+/* HERO */
 
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 100px 8% 60px;
-    background: #050505;
-    overflow: hidden;
+min-height: 100vh;
+padding: 180px 7% 100px;
+display: flex;
+align-items: center;
+background:
+radial-gradient(
+circle at 80% 40%,
+rgba(0, 170, 255, 0.18),
+transparent 35%
+),
+#050505;
 }
 
-.texto {
-    max-width: 550px;
-    z-index: 2;
+.hero-text {
+max-width: 850px;
 }
 
-.texto span {
-    color: #aaa;
-    letter-spacing: 6px;
-    font-size: 14px;
+.hero-tag,
+.section-title span,
+.plano-tag {
+color: #00aaff;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 3px;
 }
 
-.texto h2 {
-    font-size: 60px;
-    color: white;
-    line-height: 1.1;
-    margin: 20px 0;
+.hero-tag {
+display: inline-block;
+margin-bottom: 20px;
 }
 
-.texto p {
-    color: #bbb;
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 500px;
+.hero h1 {
+font-size: clamp(45px, 6vw, 82px);
+line-height: 1.05;
+letter-spacing: -3px;
+margin-bottom: 30px;
 }
 
-.texto button {
-    margin-top: 30px;
-    padding: 15px 40px;
-    border-radius: 50px;
-    border: none;
-    background: white;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s;
+.hero h1 span {
+color: #00aaff;
+display: block;
 }
 
-.texto button:hover {
-    transform: scale(1.08);
-    background: #00eaff;
+.hero p {
+max-width: 650px;
+color: #aaaaaa;
+font-size: 19px;
+margin-bottom: 35px;
 }
 
-.hero-carro {
-    width: 50%;
-    z-index: 1;
+.hero-buttons {
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
 }
 
-.hero-carro img {
-    width: 100%;
-    display: block;
-    filter: drop-shadow(0 20px 40px rgba(255, 255, 255, 0.15));
-}
- /* =========================
-    MODELOS
- ========================= */
+/* BOTÕES */
 
-#modelos {
-    background: #070707;
+.btn,
+.btn-secondary {
+display: inline-block;
+padding: 15px 28px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+transition: 0.3s;
 }
+
+.btn {
+background: #00aaff;
+color: #ffffff;
+box-shadow: 0 0 25px rgba(0, 170, 255, 0.2);
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 0 35px rgba(0, 170, 255, 0.45);
+}
+
+.btn-secondary {
+border: 1px solid #333333;
+color: #ffffff;
+}
+
+.btn-secondary:hover {
+border-color: #00aaff;
+color: #00aaff;
+}
+
+/* SEÇÕES */
 
 section {
-    padding: 100px 8%;
+padding: 110px 7%;
+scroll-margin-top: 80px;
 }
 
-section h2 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 50px;
+.section-title {
+max-width: 750px;
+margin: 0 auto 60px;
+text-align: center;
 }
 
-.carros {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.section-title h2 {
+font-size: clamp(32px, 5vw, 55px);
+line-height: 1.1;
+margin: 15px 0;
+letter-spacing: -2px;
+}
+
+.section-title p {
+color: #999999;
+font-size: 17px;
+}
+
+/* SERVIÇOS */
+
+#servicos {
+background: #080808;
+}
+
+.cards {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
 }
 
 .card {
-    width: 350px;
-    background: rgba(20, 20, 20, 0.8);
-    border-radius: 25px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(10px);
-    transition: 0.5s;
+padding: 35px;
+min-height: 260px;
+background: #0d0d0d;
+border: 1px solid #1c1c1c;
+border-radius: 15px;
+transition: 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-15px);
-    border-color: white;
-    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
+transform: translateY(-8px);
+border-color: #00aaff;
+box-shadow: 0 15px 40px rgba(0, 170, 255, 0.08);
 }
 
-.card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-    transition: 0.6s;
-}
-
-.card:hover img {
-    transform: scale(1.08);
+.card-number {
+color: #00aaff;
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 25px;
 }
 
 .card h3 {
-    color: white;
-    font-size: 28px;
-    margin: 25px 20px 10px;
-    letter-spacing: 1px;
+font-size: 25px;
+margin-bottom: 15px;
 }
 
 .card p {
-    color: #aaa;
-    font-size: 16px;
-    line-height: 1.6;
-    padding: 0 20px;
+color: #999999;
 }
 
-.card button {
-    margin: 25px 20px 30px;
-    padding: 14px 30px;
-    border-radius: 50px;
-    border: 1px solid white;
-    background: transparent;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.4s;
+/* PROCESSO */
+
+.processo-grid {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
 }
 
-.card button:hover {
-    background: white;
-    color: black;
-}
-/* =========================
-   TECNOLOGIA NX
-========================= */
-
-.tecnologia {
-    padding: 100px 8%;
-    background: #080808;
-    text-align: center;
+.processo-card {
+padding: 30px;
+background: #0b0b0b;
+border: 1px solid #1b1b1b;
+border-radius: 14px;
+transition: 0.3s;
 }
 
-.tecnologia h2 {
-    color: white;
-    font-size: 45px;
-    margin-bottom: 15px;
+.processo-card:hover {
+transform: translateY(-6px);
+border-color: #00aaff;
 }
 
-.subtitulo {
-    color: #aaa;
-    font-size: 18px;
-    margin-bottom: 50px;
+.numero {
+font-size: 30px;
+font-weight: bold;
+color: #00aaff;
+margin-bottom: 20px;
 }
 
-.tecnologias-box {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+.processo-card h3 {
+margin-bottom: 10px;
 }
 
-.tech-card {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 20px;
-    padding: 35px 25px;
-    transition: 0.4s;
+.processo-card p {
+color: #888888;
 }
 
-.tech-card:hover {
-    transform: translateY(-10px);
-    border-color: #00eaff;
-    box-shadow: 0 15px 40px rgba(0, 234, 255, 0.08);
+/* PORTFÓLIO */
+
+.portfolio {
+background: #080808;
 }
 
-.tech-card h3 {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 15px;
+.portfolio-grid {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: minmax(0, 1fr);
+gap: 30px;
 }
 
-.tech-card p {
-    color: #aaa;
-    line-height: 1.6;
-}
-/* =========================
-   SOBRE NX MOTORS
-========================= */
-
-.sobre {
-    padding: 100px 8%;
-    background: #050505;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+.portfolio-card {
+overflow: hidden;
+background: #0d0d0d;
+border: 1px solid #1c1c1c;
+border-radius: 16px;
+transition: 0.4s;
 }
 
-.sobre-texto {
-    max-width: 600px;
+.portfolio-card:hover {
+transform: translateY(-8px);
+border-color: #00aaff;
 }
 
-.sobre-texto span {
-    color: #aaa;
-    letter-spacing: 5px;
-    font-size: 14px;
+.portfolio-image {
+width: 100%;
+height: 380px;
+overflow: hidden;
 }
 
-.sobre-texto h2 {
-    color: white;
-    font-size: 45px;
-    line-height: 1.2;
-    margin: 20px 0;
-    text-align: left;
+.portfolio-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: 0.5s;
 }
 
-.sobre-texto p {
-    color: #aaa;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 15px;
+.portfolio-card:hover img {
+transform: scale(1.05);
 }
 
-.sobre-texto button {
-    margin-top: 20px;
-    padding: 15px 35px;
-    border-radius: 50px;
-    border: none;
-    background: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s;
+.portfolio-content {
+padding: 30px;
 }
 
-.sobre-texto button:hover {
-    transform: scale(1.06);
-    background: #00eaff;
+.portfolio-content > span {
+color: #00aaff;
+font-size: 12px;
+letter-spacing: 2px;
 }
 
-.sobre-box {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    min-width: 260px;
+.portfolio-content h3 {
+font-size: 30px;
+margin: 10px 0;
 }
 
-.sobre-box div {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    transition: 0.3s;
+.portfolio-content p {
+color: #999999;
+margin-bottom: 20px;
 }
 
-.sobre-box div:hover {
-    border-color: #00eaff;
-    transform: translateY(-5px);
+.portfolio-content small {
+display: block;
+margin: 12px 0 20px;
+font-size: 0.75rem;
+letter-spacing: 0.5px;
+color: #aaaaaa;
 }
 
-.sobre-box h3 {
-    color: white;
-    font-size: 35px;
-    margin-bottom: 8px;
+.portfolio-btn {
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+margin-top: 10px;
+transition: 0.3s ease;
 }
 
-.sobre-box p {
-    color: #aaa;
-}
-/* =========================
-   GALERIA NX
-========================= */
-
-.galeria {
-    padding: 100px 8%;
-    background: #080808;
-    text-align: center;
+.portfolio-btn:hover {
+color: #00aaff;
+transform: translateX(5px);
 }
 
-.galeria h2 {
-    color: white;
-    font-size: 45px;
-    margin-bottom: 15px;
+/* PLANOS */
+
+#planos {
+background: #050505;
 }
 
-.galeria > p {
-    color: #aaa;
-    font-size: 18px;
+.planos-grid {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
 }
 
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 50px;
+.plano {
+position: relative;
+padding: 40px 30px;
+background: #0b0b0b;
+border: 1px solid #1d1d1d;
+border-radius: 16px;
+transition: 0.4s;
 }
 
-.galeria-grid img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 25px;
-    transition: 0.5s;
+.plano:hover {
+transform: translateY(-8px);
+border-color: #00aaff;
 }
 
-.galeria-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
-}
-/* =========================
-   CONTATO
-========================= */
-
-.contato {
-    padding: 120px 8%;
-    background: #000;
-    text-align: center;
+.plano.destaque {
+border-color: #00aaff;
+box-shadow: 0 0 40px rgba(0, 170, 255, 0.08);
 }
 
-.contato h2 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 20px;
+.mais-vendido {
+position: absolute;
+top: 0;
+right: 0;
+padding: 8px 15px;
+border-radius: 0 16px 0 10px;
+background: #00aaff;
+color: #ffffff;
+font-size: 10px;
+font-weight: bold;
 }
 
-.contato p {
-    color: #aaa;
-    font-size: 20px;
-    line-height: 1.6;
+.plano h3 {
+font-size: 27px;
+margin-top: 15px;
 }
 
-.contato button {
-    margin-top: 30px;
-    padding: 18px 45px;
-    border-radius: 50px;
-    border: none;
-    background: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s;
+.preco {
+font-size: 36px;
+font-weight: bold;
+margin: 20px 0 5px;
 }
 
-.contato button:hover {
-    transform: scale(1.08);
-    background: #00eaff;
+.descricao {
+color: #888888;
+min-height: 55px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.plano ul {
+list-style: none;
+margin: 30px 0;
+}
+
+.plano li {
+padding: 8px 0;
+color: #cccccc;
+}
+
+.plano .btn {
+width: 100%;
+text-align: center;
+}
+
+/* CTA */
+
+.cta {
+background:
+radial-gradient(
+circle at center,
+rgba(0, 170, 255, 0.12),
+transparent 50%
+),
+#050505;
+}
+
+.cta .section-title {
+max-width: 800px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+position: fixed;
+right: 25px;
+bottom: 25px;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #00aaff;
+color: white;
+text-decoration: none;
+font-size: 25px;
+box-shadow: 0 5px 30px rgba(0, 170, 255, 0.35);
+z-index: 999;
+transition: 0.3s;
+}
+
+.whatsapp:hover {
+transform: scale(1.1);
+}
+
+/* FOOTER */
 
 footer {
-    padding: 40px;
-    background: #050505;
-    text-align: center;
-    border-top: 1px solid #151515;
+padding: 45px 7%;
+background: #030303;
+border-top: 1px solid #151515;
+text-align: center;
 }
 
-footer h3 {
-    color: white;
-    letter-spacing: 8px;
-    margin-bottom: 10px;
+footer .logo {
+margin-bottom: 25px;
+}
+
+footer nav {
+justify-content: center;
+margin-bottom: 25px;
+flex-wrap: wrap;
 }
 
 footer p {
-    color: #777;
-}
-/* =========================
-   ANIMAÇÕES
-========================= */
-
-@keyframes entradaCarroHero {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+color: #666666;
+font-size: 13px;
 }
 
-@keyframes entradaTexto {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.texto h2 {
-    animation: entradaTexto 1.2s ease;
-}
-
-.texto p {
-    animation: entradaTexto 1.5s ease;
-}
-
-.hero-carro img {
-    animation: entradaCarroHero 2s ease;
-}
-
-/* Animação para elementos que entram durante a rolagem */
+/* ANIMAÇÕES */
 
 .animar {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;
+opacity: 0;
+transform: translateY(35px);
+transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.animar.aparecer {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* =========================
-   MENU MOBILE
-========================= */
-
-.menu-btn {
-    display: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
+.animar.mostrar {
+opacity: 1;
+transform: translateY(0);
 }
 
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+}
+header {
+    padding: 20px 5%;
 
-    header {
-        padding: 20px 6%;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    nav {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: #050505;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        border-bottom: 1px solid #222;
-    }
-
-    nav a {
-        margin: 15px;
-    }
-
-    nav.ativo {
-        display: flex;
-    }
-
-    /* HERO */
-
-    .hero {
-        min-height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 120px 6% 60px;
-    }
-
-    .texto {
-        max-width: 100%;
-    }
-
-    .texto h2 {
-        font-size: 42px;
-    }
-
-    .texto p {
-        font-size: 18px;
-        margin: 0 auto;
-    }
-
-    .hero-carro {
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    /* TECNOLOGIA */
-
-    .tecnologias-box {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* SOBRE */
-
-    .sobre {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sobre-texto {
-        max-width: 100%;
-    }
-
-    .sobre-texto h2 {
-        text-align: center;
-        font-size: 38px;
-    }
-
-    .sobre-box {
-        width: 100%;
-        max-width: 500px;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* GALERIA */
-
-    .galeria-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-grid img {
-        height: 280px;
-    }
-
-    /* CONTATO */
-
-    .contato h2 {
-        font-size: 40px;
-    }
+nav {
+    gap: 16px;
+}
+}
+.cards {
+    grid-template-columns: 1fr;
 }
 
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 26px;
-    }
-
-    .texto h2 {
-        font-size: 34px;
-    }
-
-    .texto span {
-        font-size: 12px;
-        letter-spacing: 4px;
-    }
-
-    .texto p {
-        font-size: 16px;
-    }
-
-    section {
-        padding: 75px 6%;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-
-    /* MODELOS */
-
-    .carros {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 380px;
-    }
-
-    .card img {
-        height: 230px;
-    }
-
-    /* TECNOLOGIA */
-
-    .tecnologias-box {
-        grid-template-columns: 1fr;
-    }
-
-    /* SOBRE */
-
-    .sobre {
-        padding: 75px 6%;
-    }
-
-    .sobre-texto h2 {
-        font-size: 34px;
-    }
-
-    .sobre-texto p {
-        font-size: 16px;
-    }
-
-    .sobre-box {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    /* GALERIA */
-
-    .galeria {
-        padding: 75px 6%;
-    }
-
-    .galeria h2 {
-        font-size: 35px;
-    }
-
-    .galeria-grid img {
-        height: 230px;
-    }
-
-    /* CONTATO */
-
-    .contato {
-        padding: 90px 6%;
-    }
-
-    .contato h2 {
-        font-size: 32px;
-    }
-
-    .contato p {
-        font-size: 17px;
-    }
-
-    /* INTRO */
-
-    .intro h1 {
-        font-size: 70px;
-        letter-spacing: 15px;
-    }
-
-    .intro p {
-        font-size: 10px;
-        letter-spacing: 5px;
-    }
+.processo-grid {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-/* =========================
-   INTRO NX
-========================= */
+.planos-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+}
 
-.intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+.portfolio-image {
+    height: 340px;
+}
 
-    background: #000;
-    color: white;
 
-    display: flex;
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+
+header {
+    position: absolute;
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    padding: 20px 5%;
+}
+
+header nav {
+    width: 100%;
+    gap: 10px 14px;
+    flex-wrap: wrap;
     justify-content: center;
-
-    z-index: 99999;
-
-    animation: introSaida 3.5s ease forwards;
 }
 
-.intro h1 {
-    font-size: 120px;
-    letter-spacing: 25px;
-    margin: 0;
-
-    animation: logoEntrada 1.5s ease forwards;
+header nav a {
+    font-size: 12px;
 }
 
-.intro p {
-    color: #aaa;
+.hero {
+    min-height: auto;
+    padding: 170px 6% 90px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 11vw, 50px);
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: inline;
+}
+
+.hero p {
     font-size: 16px;
-    letter-spacing: 8px;
-    margin-top: 10px;
-
-    animation: fraseEntrada 1.5s ease forwards;
 }
 
-/* LOGO */
-
-@keyframes logoEntrada {
-
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-
+.hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
 }
 
-/* FRASE */
-
-@keyframes fraseEntrada {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
+.hero-buttons .btn,
+.hero-buttons .btn-secondary {
+    width: 100%;
+    text-align: center;
 }
 
-/* SAÍDA DA INTRO */
+section {
+    padding: 80px 6%;
+}
 
-@keyframes introSaida {
+.section-title {
+    margin-bottom: 45px;
+}
 
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
+.section-title h2 {
+    font-size: 36px;
+}
 
-    70% {
-        opacity: 1;
-        visibility: visible;
-    }
+.section-title p {
+    font-size: 15px;
+}
 
-    100% {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+.card {
+    padding: 28px;
+    min-height: auto;
+}
 
-}   
+.processo-grid {
+    grid-template-columns: 1fr;
+}
+
+.processo-card {
+    padding: 28px;
+}
+
+.portfolio-grid {
+    grid-template-columns: 1fr;
+}
+
+.portfolio-image {
+    height: 220px;
+}
+
+.portfolio-content {
+    padding: 25px;
+}
+
+.portfolio-content h3 {
+    font-size: 27px;
+}
+
+.plano {
+    padding: 35px 25px;
+}
+
+.preco {
+    font-size: 32px;
+}
+
+.whatsapp {
+    width: 56px;
+    height: 56px;
+    right: 18px;
+    bottom: 18px;
+}
+
+footer {
+    padding: 40px 6%;
+}
+
+footer nav {
+    gap: 14px;
+}
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 400px) {
+
+}
+.logo {
+    font-size: 21px;
+}
+
+header nav {
+    gap: 8px 10px;
+}
+
+header nav a {
+    font-size: 11px;
+}
+
+.hero {
+    padding-top: 165px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.section-title h2 {
+    font-size: 31px;
+}
+
+.portfolio-image {
+    height: 190px;
+}
+
+.whatsapp {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+}

@@ -1,9 +1,12 @@
-// =========================
-// ANIMAÇÃO DAS SEÇÕES
-// =========================
+// =====================================
+// CP WEB STUDIO
+// =====================================
+
+
+// ANIMAÇÕES AO ROLAR
 
 const elementos = document.querySelectorAll(
-    ".card, .tech-card, .sobre, .galeria, .contato"
+    ".card, .processo-card, .portfolio-card, .plano, .section-title"
 );
 
 const observer = new IntersectionObserver(
@@ -13,22 +16,20 @@ const observer = new IntersectionObserver(
 
             if (entrada.isIntersecting) {
 
-                entrada.target.classList.add("animar");
-
-                setTimeout(() => {
-                    entrada.target.classList.add("aparecer");
-                }, 100);
+                entrada.target.classList.add("mostrar");
 
                 observer.unobserve(entrada.target);
+
             }
 
         });
 
     },
     {
-        threshold: 0.2
+        threshold: 0.12
     }
 );
+
 
 elementos.forEach((elemento) => {
 
@@ -39,16 +40,44 @@ elementos.forEach((elemento) => {
 });
 
 
-// =========================
-// MENU MOBILE
-// =========================
+// HEADER AO ROLAR
 
-function abrirMenu() {
+const header = document.getElementById("header");
 
-    const menu = document.getElementById("menu");
+window.addEventListener("scroll", () => {
 
-    if (menu) {
-        menu.classList.toggle("ativo");
+    if (window.scrollY > 50) {
+
+        header.classList.add("header-scroll");
+
+    } else {
+
+        header.classList.remove("header-scroll");
+
     }
+
+});
+
+
+// LINK DO NX MOTORS
+
+function abrirProjeto(event) {
+    event.preventDefault();
+
+    window.open(
+        "https://lorexluc.github.io/NX-Motors/",
+        "_blank"
+    );
+}
+
+
+// ANO AUTOMÁTICO
+
+const footerTexto = document.querySelector("footer p");
+
+if (footerTexto) {
+
+    footerTexto.innerHTML =
+        `© ${new Date().getFullYear()} CP Web Studio — Todos os direitos reservados.`;
 
 }
