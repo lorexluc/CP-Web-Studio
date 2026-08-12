@@ -1101,13 +1101,13 @@ function enviarCPAI() {
 
     .then(response => {
 
-        if (!response.ok) {
-            throw new Error("Erro no servidor");
-        }
+    if (!response.ok) {
+        throw new Error("Erro no servidor");
+    }
 
-        return response.json();
+    return response.json();
 
-    })
+})
 
     .then(data => {
 
@@ -1127,19 +1127,22 @@ function enviarCPAI() {
 
     .catch(error => {
 
-        console.error(error);
+    console.error(error);
 
-        const elemento =
-            document.getElementById("cpAIPensando");
+    const elemento =
+        document.getElementById("cpAIPensando");
 
-        if (elemento) {
-            elemento.remove();
-        }
+    if (elemento) {
+        elemento.remove();
+    }
 
-        adicionarMensagemCPAI(
-            "⚠️ Não consegui conectar com a CP AI. Tente novamente.",
-            "bot"
-        );
+    adicionarMensagemCPAI(
+        "⚠️ " +
+        (error.message || "Erro desconhecido."),
+        "bot"
+    );
 
-    });
+});
+
+    
 }
