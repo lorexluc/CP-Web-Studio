@@ -1084,9 +1084,9 @@ function enviarCPAI() {
     mensagens.scrollTop =
         mensagens.scrollHeight;
 
-    fetch(
-        "https://cp-msb1pjv5q-cp-web-studio.vercel.app/api/chat",
-        {
+   fetch(
+    "https://cp-ai-one.vercel.app/api/chat",
+    { 
             method: "POST",
 
             headers: {
