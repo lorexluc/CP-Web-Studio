@@ -1086,18 +1086,18 @@ function enviarCPAI() {
 
    fetch(
     "https://cp-ai-one.vercel.app/api/chat",
-    { 
-            method: "POST",
+    {
+        method: "POST",
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+        headers: {
+            "Content-Type": "text/plain"
+        },
 
-            body: JSON.stringify({
-                message: pergunta
-            })
-        }
-    )
+        body: JSON.stringify({
+            message: pergunta
+        })
+    }
+)
 
     .then(response => {
 
